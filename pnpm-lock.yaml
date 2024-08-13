@@ -40,6 +40,9 @@ devDependencies:
   eslint-config-prettier:
     specifier: ^9.1.0
     version: 9.1.0(eslint@9.9.0)
+  eslint-config-sanity:
+    specifier: ^7.1.2
+    version: 7.1.2(@typescript-eslint/parser@8.0.0-alpha.10)(eslint@9.9.0)
   eslint-plugin-prettier:
     specifier: ^5.2.1
     version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@9.9.0)(prettier@3.3.3)
@@ -4618,6 +4621,33 @@ packages:
       eslint: 9.9.0
     dev: true
 
+  /eslint-config-sanity@7.1.2(@typescript-eslint/parser@8.0.0-alpha.10)(eslint@9.9.0):
+    resolution: {integrity: sha512-7Na1kh3OiteeFmeQkUqtIjThsKWIIiK/TLNUby0pOkGHhWV3AKYFsMEIhH7VuOIEOeTE53Ix/04Z6XWyvsHcuQ==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      '@typescript-eslint/eslint-plugin': ^6.7.5 || ^7.0.0
+      '@typescript-eslint/parser': ^6.7.5 || ^7.0.0
+      eslint: ^8.51.0
+      eslint-plugin-import: ^2.28.1
+      eslint-plugin-react: ^7.33.2
+      eslint-plugin-react-hooks: '*'
+    peerDependenciesMeta:
+      '@typescript-eslint/eslint-plugin':
+        optional: true
+      '@typescript-eslint/parser':
+        optional: true
+      eslint-plugin-import:
+        optional: true
+      eslint-plugin-react:
+        optional: true
+      eslint-plugin-react-hooks:
+        optional: true
+    dependencies:
+      '@typescript-eslint/parser': 8.0.0-alpha.10(eslint@9.9.0)(typescript@5.5.4)
+      eslint: 9.9.0
+      eslint-plugin-simple-import-sort: 12.1.1(eslint@9.9.0)
+    dev: true
+
   /eslint-plugin-jsx-a11y@6.9.0(eslint@9.9.0):
     resolution: {integrity: sha512-nOFOCaJG2pYqORjK19lqPqxMO/JpvdCZdPtNdxY3kvom3jTvkAbOvQvD8wuD0G8BYR0IGAGYDlzqWJOh/ybn2g==}
     engines: {node: '>=4.0'}
@@ -4698,6 +4728,14 @@ packages:
       semver: 6.3.1
       string.prototype.matchall: 4.0.11
       string.prototype.repeat: 1.0.0
+    dev: true
+
+  /eslint-plugin-simple-import-sort@12.1.1(eslint@9.9.0):
+    resolution: {integrity: sha512-6nuzu4xwQtE3332Uz0to+TxDQYRLTKRESSc2hefVT48Zc8JthmN23Gx9lnYhu0FtkRSL1oxny3kJ2aveVhmOVA==}
+    peerDependencies:
+      eslint: '>=5.0.0'
+    dependencies:
+      eslint: 9.9.0
     dev: true
 
   /eslint-scope@5.1.1:

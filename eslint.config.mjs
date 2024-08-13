@@ -1,4 +1,3 @@
-// import eslintPluginSanity from '@sanity/eslint-config-studio'
 
 import prettier from 'eslint-plugin-prettier'
 
@@ -19,9 +18,8 @@ const compat = new FlatCompat({
 })
 
 export default [
-  ...compat.extends('prettier', 'plugin:prettier/recommended'),
+  ...compat.extends('prettier', 'plugin:prettier/recommended', ),
   ...tseslint.configs.recommended,
-  // ...eslintPluginSanity.configs.recommended,
   {
     ignores: ['**/node_modules', '**/.cache', '**/public', '*.config.*']
   },
@@ -40,7 +38,6 @@ export default [
           '/Users/adrian/Desktop/Adrian/Projects/ERBACHER/Petfood-PL/petfood-pl-josera-partner-lp-front'
       }
     },
-
     rules: {
       'prefer-const': 'error',
       'no-var': 'error',
