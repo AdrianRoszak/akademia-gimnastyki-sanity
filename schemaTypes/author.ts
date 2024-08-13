@@ -1,7 +1,9 @@
 import { defineField, defineType } from 'sanity'
 
+const author = 'author'
+
 export default defineType({
-  name: 'author',
+  name: author,
   title: 'Author',
   type: 'document',
   fields: [
