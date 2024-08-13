@@ -3,12 +3,13 @@ import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './schemaTypes'
 
-export default defineConfig({
-  name: 'default',
-  title: 'Akademia Gimnastyki',
+import { projectId, dataset } from './src/environment'
 
-  projectId: 'ix1jotzh',
-  dataset: 'production',
+export default defineConfig({
+  name: 'akademia_gimnastyki',
+  title: 'Akademia Gimnastyki',
+  projectId: projectId || '',
+  dataset: dataset || '',
 
   plugins: [structureTool(), visionTool()],
 
