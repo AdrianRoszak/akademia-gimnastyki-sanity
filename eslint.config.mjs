@@ -18,7 +18,7 @@ const compat = new FlatCompat({
 })
 
 export default [
-  ...compat.extends('prettier', 'plugin:prettier/recommended', ),
+  ...compat.extends('prettier', 'plugin:prettier/recommended', 'eslint-config-sanity' ),
   ...tseslint.configs.recommended,
   {
     ignores: ['**/node_modules', '**/.cache', '**/public', '*.config.*']
