@@ -7,11 +7,5 @@ module.exports = {
   '**/*.(ts|tsx|cjs|js)': filenames => [
     `eslint --fix ${filenames.join(' ')}`,
     `pnpm format ${filenames.join(' ')}`
-  ],
-
-  // Lint SCSS files
-  '**/*.scss': filenames => [`pnpm lint:scss ${filenames.join(' ')}`],
-
-  // Format CSS files
-  '**/*.css': filenames => `pnpm format ${filenames.join(' ')}`
+  ]
 }
