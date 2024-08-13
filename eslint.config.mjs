@@ -42,6 +42,8 @@ export default [
       'prefer-const': 'error',
       'no-var': 'error',
       'no-unused-vars': 'off',
+        'object-curly-spacing': 'off',
+
       'no-console': [
         'error',
         {

@@ -1,0 +1,29 @@
+{
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.experimental.useFlatConfig": true,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#4d6633",
+    "activityBar.background": "#4d6633",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#203040",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#4d6633",
+    "statusBar.background": "#334422",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#4d6633",
+    "statusBarItem.remoteBackground": "#334422",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#334422",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#33442299",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.color": "334422"
+}
