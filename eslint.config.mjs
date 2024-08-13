@@ -7,15 +7,15 @@ import tseslint from 'typescript-eslint'
 import path from 'node:path'
 import js from '@eslint/js'
 
-import {fileURLToPath} from 'node:url'
-import {FlatCompat} from '@eslint/eslintrc'
+import { fileURLToPath } from 'node:url'
+import { FlatCompat } from '@eslint/eslintrc'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const compat = new FlatCompat({
   baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
+  allConfig: js.configs.all
 })
 
 export default [
@@ -23,13 +23,13 @@ export default [
   ...tseslint.configs.recommended,
   // ...eslintPluginSanity.configs.recommended,
   {
-    ignores: ['**/node_modules', '**/.cache', '**/public', '*.config.*'],
+    ignores: ['**/node_modules', '**/.cache', '**/public', '*.config.*']
   },
   {
     files: ['**/*.ts', '**/*.tsx'],
     plugins: {
       prettier,
-      '@typescript-eslint': tseslint.plugin,
+      '@typescript-eslint': tseslint.plugin
     },
     languageOptions: {
       ecmaVersion: 'latest',
@@ -37,8 +37,8 @@ export default [
       parser: tseslint.parser,
       parserOptions: {
         tsconfigRootDir:
-          '/Users/adrian/Desktop/Adrian/Projects/ERBACHER/Petfood-PL/petfood-pl-josera-partner-lp-front',
-      },
+          '/Users/adrian/Desktop/Adrian/Projects/ERBACHER/Petfood-PL/petfood-pl-josera-partner-lp-front'
+      }
     },
 
     rules: {
@@ -48,18 +48,18 @@ export default [
       'no-console': [
         'error',
         {
-          allow: ['warn', 'error'],
-        },
+          allow: ['warn', 'error']
+        }
       ],
       '@typescript-eslint/no-unused-vars': [
         'error',
         {
           argsIgnorePattern: '^_[^_].*$|^_$',
           varsIgnorePattern: '^_[^_].*$|^_$',
-          caughtErrorsIgnorePattern: '^_[^_].*$|^_$',
-        },
+          caughtErrorsIgnorePattern: '^_[^_].*$|^_$'
+        }
       ],
-      '@typescript-eslint/no-explicit-any': 'error',
-    },
-  },
+      '@typescript-eslint/no-explicit-any': 'error'
+    }
+  }
 ]

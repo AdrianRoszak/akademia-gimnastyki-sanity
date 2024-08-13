@@ -1,13 +1,5 @@
 {
-  "plugins": [],
-  "overrides": [
-    {
-      "files": "**/*.astro",
-      "options": {
-        "parser": "astro"
-      }
-    }
-  ],
+  "plugins": ["@sanity/prettier-config"],
   "printWidth": 80,
   "tabWidth": 2,
   "semi": false,
