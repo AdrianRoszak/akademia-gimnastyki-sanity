@@ -1,4 +1,3 @@
-
 import prettier from 'eslint-plugin-prettier'
 
 import tseslint from 'typescript-eslint'
@@ -18,7 +17,11 @@ const compat = new FlatCompat({
 })
 
 export default [
-  ...compat.extends('prettier', 'plugin:prettier/recommended', 'eslint-config-sanity' ),
+  ...compat.extends(
+    'prettier',
+    'plugin:prettier/recommended',
+    'eslint-config-sanity'
+  ),
   ...tseslint.configs.recommended,
   {
     ignores: ['**/node_modules', '**/.cache', '**/public', '*.config.*']
@@ -42,7 +45,7 @@ export default [
       'prefer-const': 'error',
       'no-var': 'error',
       'no-unused-vars': 'off',
-        'object-curly-spacing': 'off',
+      'object-curly-spacing': 'off',
 
       'no-console': [
         'error',
