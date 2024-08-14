@@ -5,13 +5,30 @@ on:
     branches: [main]
 
 jobs:
-  sanity-deploy:
+  deploy:
+    name: Build and deploy
     runs-on: ubuntu-latest
-    name: Deploy Sanity
+    env:
+      SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
     steps:
       - uses: actions/checkout@v2
-      - uses: sanity-io/github-action-sanity@v0.7-alpha
-        env:
-          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
         with:
-          args: deploy
+          fetch-depth: 2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '22.x'
+      - name: Restore cached Node Modules 💾
+        id: cache-node-modules
+        uses: actions/cache@v3
+        with:
+          path: node_modules
+          key: node-modules-${{ hashFiles('pnpm-lock.json') }}
+      - name: Install pnpm
+        run: npm install -g pnpm
+        working-directory: ./studio
+      - name: Install dependencies
+        run: pnpm install
+      - name: Install Sanity CLI
+        run: pnpm install -g @sanity/cli
+      - name: Deploy Studio
+        run: pnpm deploy
