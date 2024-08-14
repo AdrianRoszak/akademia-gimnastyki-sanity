@@ -28,4 +28,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Deploy Studio
-        run: sanity deploy
+        run: npx sanity deploy
