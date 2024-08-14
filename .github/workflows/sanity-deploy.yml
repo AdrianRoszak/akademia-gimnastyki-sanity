@@ -27,6 +27,8 @@ jobs:
         run: npm install -g pnpm
       - name: Install dependencies
         run: pnpm install
+      - name: Update pnpm
+        run: pnpm setup && pnpm add -g pnpm
       - name: Install Sanity CLI
         run: pnpm install -g @sanity/cli
       - name: Deploy Studio
