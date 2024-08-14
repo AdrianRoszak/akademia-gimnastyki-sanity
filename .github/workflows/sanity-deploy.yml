@@ -23,13 +23,9 @@ jobs:
         with:
           path: node_modules
           key: node-modules-${{ hashFiles('pnpm-lock.json') }}
-      - name: Install pnpm
-        run: npm install -g pnpm
       - name: Install dependencies
-        run: pnpm install
-      - name: Update pnpm
-        run: pnpm setup && pnpm add -g pnpm
+        run: npm install
       - name: Install Sanity CLI
-        run: pnpm install -g @sanity/cli
+        run: npm install -g @sanity/cli
       - name: Deploy Studio
-        run: pnpm deploy
+        run: sanity deploy
