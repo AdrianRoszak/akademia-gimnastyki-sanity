@@ -1,0 +1,6 @@
+name: Sanity Deploy
+
+on: 
+  push: 
+    branches: [main]
+
