@@ -27,4 +27,4 @@ jobs:
       - name: Install Sanity CLI
         run: pnpm install -g @sanity/cli
       - name: Deploy Studio
-        run: pnpm deploy
+        run: sanity deploy
