@@ -4,12 +4,12 @@ const author = 'author'
 
 export default defineType({
   name: author,
-  title: 'Author',
+  title: 'Artysta',
   type: 'document',
   fields: [
     defineField({
       name: 'name',
-      title: 'Name',
+      title: 'Imię',
       type: 'string'
     }),
     defineField({
