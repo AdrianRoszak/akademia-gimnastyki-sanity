@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity'
 
-export const offerItem = defineType({
-  name: 'offerItem',
-  title: 'Oferta',
+export const serviceItem = defineType({
+  name: 'service_item',
+  title: 'Usługa',
   type: 'document',
   fields: [
     defineField({
@@ -12,29 +12,17 @@ export const offerItem = defineType({
       validation: (Rule) => Rule.required()
     }),
     defineField({
-      name: 'description',
+      name: 'service_description',
       title: 'Opis',
       type: 'text',
       validation: (Rule) => Rule.required()
     }),
     defineField({
-      name: 'price',
-      title: 'Cena',
-      type: 'number',
-      validation: (Rule) => Rule.required()
-    }),
-    defineField({
-      name: 'image',
-      title: 'Obrazek',
-      type: 'image',
-      validation: (Rule) => Rule.required()
-    }),
-    defineField({
-      name: 'slug',
+      name: 'service_slug',
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'title'
+        source: 'service_name'
       },
       validation: (Rule) => Rule.required()
     })

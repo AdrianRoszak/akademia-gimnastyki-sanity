@@ -7,5 +7,9 @@ export const structure = (S) =>
         .id('home')
         .title('Strona główna')
         .child(S.document().schemaType('home')),
-      S.divider()
+      S.divider(),
+      S.listItem()
+        .id('offer')
+        .title('Usługi')
+        .child(S.documentTypeList('service_item'))
     ])
