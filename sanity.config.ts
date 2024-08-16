@@ -6,27 +6,13 @@ import { structure } from './src/structure'
 
 import { projectId, dataset } from './src/environment'
 
-export default defineConfig([
-  {
-    name: 'ag-prod',
-    title: 'Akademia Gimnastyki - prod',
-    projectId: projectId || '',
-    dataset: 'production',
-    basePath: '/prod',
-    plugins: [structureTool({ structure }), visionTool()],
-    schema: {
-      types: schemaTypes
-    }
-  },
-  {
-    name: 'ag-dev',
-    title: 'Akademia Gimnastyki - dev',
-    projectId: projectId || '',
-    dataset: 'development',
-    basePath: '/dev',
-    plugins: [structureTool({ structure }), visionTool()],
-    schema: {
-      types: schemaTypes
-    }
+export default defineConfig({
+  name: 'ag',
+  title: 'Akademia Gimnastyki',
+  projectId: projectId || '',
+  dataset: dataset || '',
+  plugins: [structureTool({ structure }), visionTool()],
+  schema: {
+    types: schemaTypes
   }
-])
+})
