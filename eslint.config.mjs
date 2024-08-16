@@ -46,7 +46,10 @@ export default [
       'no-var': 'error',
       'no-unused-vars': 'off',
       'object-curly-spacing': 'off',
-
+      "allow-parens": "off",
+      "implicit-arrow-linebreak": "off",
+      "indent": "off",
+      "camelcase": "off",
       'no-console': [
         'error',
         {
