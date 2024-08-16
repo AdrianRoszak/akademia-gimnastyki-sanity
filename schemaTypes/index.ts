@@ -1,14 +1,9 @@
-// import blockContent from './blockContent'
-// import category from './category'
-// import post from './post'
-// import author from './author'
-
+import * as contentTypes from './content-types'
+import * as fields from './fields'
 import * as pages from './pages'
 
 export const schemaTypes = [
-  ...Object.values(pages)
-  // post,
-  // author,
-  // category,
-  // blockContent
+  ...Object.values(pages),
+  ...Object.values(contentTypes),
+  ...Object.values(fields)
 ]
