@@ -8,7 +8,7 @@ export const home = defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'Tytuł strony',
+      title: 'Tytuł',
       type: 'string',
       initialValue: 'Strona Główna'
     })
