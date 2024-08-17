@@ -20,7 +20,7 @@ export const valuesBlock = defineType({
     defineField({
       name: 'values_block_values_selector',
       title: 'Wartości',
-      type: 'values_selector'
+      type: 'value_selector'
     })
   ]
 })

@@ -14,10 +14,15 @@ export const home = defineType({
     }),
     defineField({
       name: 'home_banner_selector',
-      title: 'Baner',
+      title: 'Sekcja banerów',
       type: 'banner_selector',
       description:
         'Wybierz banery z listy. Jeśli dodasz więcej niż jeden, będą wyświetlane w karuzeli.'
+    }),
+    defineField({
+      name: 'home_values_block',
+      title: 'Sekcja wartości',
+      type: 'values_block'
     })
   ]
 })
