@@ -1,28 +1,28 @@
 import { defineField, defineType } from 'sanity'
 
-export const serviceItem = defineType({
-  name: 'service_item',
-  title: 'Usługa',
+export const sportItem = defineType({
+  name: 'sport_item',
+  title: 'Dyscyplina sportowa',
   type: 'document',
   fields: [
     defineField({
-      name: 'service_name',
-      title: 'Nazwa usługi',
+      name: 'sport_name',
+      title: 'Nazwa dyscypliny',
       type: 'string',
       validation: (Rule) => Rule.required()
     }),
     defineField({
-      name: 'service_description',
-      title: 'Opis',
+      name: 'sport_description',
+      title: 'Opis dyscypliny',
       type: 'text',
       validation: (Rule) => Rule.required()
     }),
     defineField({
-      name: 'service_slug',
+      name: 'sport_slug',
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'service_name'
+        source: 'sport_name'
       },
       validation: (Rule) => Rule.required()
     })

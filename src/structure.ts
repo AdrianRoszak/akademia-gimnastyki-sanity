@@ -9,7 +9,16 @@ export const structure = (S) =>
         .child(S.document().schemaType('home')),
       S.divider(),
       S.listItem()
-        .id('offer')
-        .title('Usługi')
-        .child(S.documentTypeList('service_item'))
+        .id('banners')
+        .title('Banery')
+        .child(S.documentTypeList('banner_item').title('Banery')),
+      S.listItem()
+        .id('values')
+        .title('Wartości')
+        .child(S.documentTypeList('value_item').title('Wartości')),
+      S.divider(),
+      S.listItem()
+        .id('sports')
+        .title('Dyscypliny sportowe')
+        .child(S.documentTypeList('sport_item').title('Dyscypliny sportowe'))
     ])
