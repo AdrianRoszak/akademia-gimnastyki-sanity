@@ -6,13 +6,13 @@ export const bannerItem = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'banner_title',
+      name: 'banner_item_title',
       title: 'Tytuł banera',
       type: 'string',
       validation: (Rule) => Rule.required()
     }),
     defineField({
-      name: 'banner_subtitle',
+      name: 'banner_item_subtitle',
       title: 'Podtytuł banera',
       type: 'string',
       validation: (Rule) => Rule.required()

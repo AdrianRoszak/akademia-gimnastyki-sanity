@@ -6,23 +6,23 @@ export const sportItem = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'sport_name',
+      name: 'sport_item_name',
       title: 'Nazwa dyscypliny',
       type: 'string',
       validation: (Rule) => Rule.required()
     }),
     defineField({
-      name: 'sport_description',
+      name: 'sport_item_description',
       title: 'Opis dyscypliny',
       type: 'text',
       validation: (Rule) => Rule.required()
     }),
     defineField({
-      name: 'sport_slug',
+      name: 'sport_item_slug',
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'sport_name'
+        source: 'sport_item_name'
       },
       validation: (Rule) => Rule.required()
     })

@@ -7,13 +7,13 @@ export const home = defineType({
   __experimental_formPreviewTitle: false,
   fields: [
     defineField({
-      name: 'title',
+      name: 'home_title',
       title: 'Tytuł',
       type: 'string',
       initialValue: 'Strona Główna'
     }),
     defineField({
-      name: 'banner',
+      name: 'home_banner_selector',
       title: 'Baner',
       type: 'banner_selector',
       description:

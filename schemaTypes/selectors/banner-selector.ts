@@ -6,7 +6,7 @@ export const bannerSelector = defineType({
   type: 'object',
   fields: [
     defineField({
-      name: 'banner_list',
+      name: 'banner_selector_list',
       title: 'Lista banerów',
       type: 'array',
       validation: (Rule) =>
@@ -17,7 +17,7 @@ export const bannerSelector = defineType({
       of: [
         defineArrayMember({
           type: 'reference',
-          title: 'Wybierz baner z listy lub dodaj nowy.',
+          title: 'Wybierz element z listy lub dodaj nowy.',
           to: [{ type: 'banner_item' }],
           validation: (Rule) =>
             Rule.error('Tylko elementy z zakładki ::banery:: są dozwolone.'),
