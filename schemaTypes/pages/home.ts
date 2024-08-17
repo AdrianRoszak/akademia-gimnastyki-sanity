@@ -11,6 +11,13 @@ export const home = defineType({
       title: 'Tytuł',
       type: 'string',
       initialValue: 'Strona Główna'
+    }),
+    defineField({
+      name: 'banner',
+      title: 'Baner',
+      type: 'banner_selector',
+      description:
+        'Wybierz banery z listy. Jeśli dodasz więcej niż jeden, będą wyświetlane w karuzeli.'
     })
   ]
 })
