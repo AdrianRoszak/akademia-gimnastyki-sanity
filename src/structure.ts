@@ -20,5 +20,10 @@ export const structure = (S) =>
       S.listItem()
         .id('sports')
         .title('Dyscypliny sportowe')
-        .child(S.documentTypeList('sport_item').title('Dyscypliny sportowe'))
+        .child(S.documentTypeList('sport_item').title('Dyscypliny sportowe')),
+      S.divider(),
+      S.listItem()
+        .id('company')
+        .title('Dane firmy')
+        .child(S.document().schemaType('company_data'))
     ])
