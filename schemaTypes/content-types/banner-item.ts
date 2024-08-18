@@ -6,16 +6,26 @@ export const bannerItem = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'banner_item_title',
-      title: 'Tytuł banera',
+      name: 'banner_item_heading',
+      title: 'Nagłówek banera',
       type: 'string',
-      validation: (Rule) => Rule.required()
+      description:
+        'Wprowadź nagłówek banera, który powinien zawierać od 3 do 50 znaków',
+      validation: (Rule) => Rule.required().min(3).max(50)
     }),
     defineField({
-      name: 'banner_item_subtitle',
-      title: 'Podtytuł banera',
+      name: 'banner_item_lead',
+      title: 'Opis banera',
       type: 'string',
-      validation: (Rule) => Rule.required()
+      description:
+        'Wprowadź opis banera, który powinien zawierać od 20 do 100 znaków',
+      validation: (Rule) => Rule.warning().min(20).max(100)
+    }),
+    defineField({
+      name: 'banner_item_images',
+      title: 'Zdjęcia banera',
+      type: 'banner_image_block',
+      description: 'Wprowadź zdjęcia banera.'
     })
   ]
 })

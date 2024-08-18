@@ -31,6 +31,9 @@ devDependencies:
   '@eslint/js':
     specifier: ^9.9.0
     version: 9.9.0
+  '@sanity/asset-utils':
+    specifier: ^1.3.0
+    version: 1.3.0
   '@sanity/eslint-config-studio':
     specifier: ^4.0.0
     version: 4.0.0(eslint@9.9.0)(typescript@5.5.4)
@@ -48,7 +51,7 @@ devDependencies:
     version: 9.1.0(eslint@9.9.0)
   eslint-config-sanity:
     specifier: ^7.1.2
-    version: 7.1.2(@typescript-eslint/parser@8.0.0-alpha.10)(eslint@9.9.0)
+    version: 7.1.2(@typescript-eslint/parser@7.18.0)(eslint@9.9.0)
   eslint-plugin-prettier:
     specifier: ^5.2.1
     version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@9.9.0)(prettier@3.3.3)
@@ -2404,7 +2407,6 @@ packages:
   /@sanity/asset-utils@1.3.0:
     resolution: {integrity: sha512-uyIOtGA4Duf+68I3BSbYHY5P+WGftn3QtNJD2Pn7h9WPGYsSrWViIPebE9yRN8N0NHhYj+hDQXaMpVdjG7r+zA==}
     engines: {node: '>=10'}
-    dev: false
 
   /@sanity/bifur-client@0.4.1:
     resolution: {integrity: sha512-mHM8WR7pujbIw2qxuV0lzinS1izOoyLza/ejWV6quITTLpBhUoPIQGPER3Ar0SON5JV0VEEqkJGa1kjiYYgx2w==}
@@ -4884,7 +4886,7 @@ packages:
       eslint: 9.9.0
     dev: true
 
-  /eslint-config-sanity@7.1.2(@typescript-eslint/parser@8.0.0-alpha.10)(eslint@9.9.0):
+  /eslint-config-sanity@7.1.2(@typescript-eslint/parser@7.18.0)(eslint@9.9.0):
     resolution: {integrity: sha512-7Na1kh3OiteeFmeQkUqtIjThsKWIIiK/TLNUby0pOkGHhWV3AKYFsMEIhH7VuOIEOeTE53Ix/04Z6XWyvsHcuQ==}
     engines: {node: '>=14.0.0'}
     peerDependencies:
@@ -4906,7 +4908,7 @@ packages:
       eslint-plugin-react-hooks:
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 8.0.0-alpha.10(eslint@9.9.0)(typescript@5.5.4)
+      '@typescript-eslint/parser': 7.18.0(eslint@9.9.0)(typescript@5.5.4)
       eslint: 9.9.0
       eslint-plugin-simple-import-sort: 12.1.1(eslint@9.9.0)
     dev: true
