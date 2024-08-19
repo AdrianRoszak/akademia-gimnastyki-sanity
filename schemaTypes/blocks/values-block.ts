@@ -7,14 +7,16 @@ export const valuesBlock = defineType({
   fields: [
     defineField({
       name: 'values_block_title',
-      title: 'Tytuł',
+      title: 'Nagłówek',
       type: 'string',
-      initialValue: 'Nasze wartości'
+      description: 'Wprowadź nagłówek sekcji. Maksymalnie 50 znaków.',
+      validation: (Rule) => Rule.required().min(3).max(50)
     }),
     defineField({
-      name: 'values_block_description',
-      title: 'Opis',
+      name: 'values_block_lead',
+      title: 'Lead',
       type: 'text',
+      description: 'Wprowadź krótki opis sekcji.',
       rows: 2
     }),
     defineField({

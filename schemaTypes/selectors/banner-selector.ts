@@ -13,7 +13,7 @@ export const bannerSelector = defineType({
         Rule.min(1)
           .max(4)
           .error('Musisz dodać przynajmniej 1 element, ale nie więcej niż 4.'),
-      description: 'Możesz dodać maksymalnie 4 elementów.',
+      description: 'Możesz dodać maksymalnie 4 elementy.',
       of: [
         defineArrayMember({
           type: 'reference',

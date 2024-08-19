@@ -10,7 +10,8 @@ export const home = defineType({
       name: 'home_title',
       title: 'Tytuł',
       type: 'string',
-      initialValue: 'Strona Główna'
+      initialValue: 'Strona Główna',
+      hidden: true
     }),
     defineField({
       name: 'home_banner_selector',
