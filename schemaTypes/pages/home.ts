@@ -24,6 +24,11 @@ export const home = defineType({
       name: 'home_values_block',
       title: 'Sekcja wartości',
       type: 'values_block'
+    }),
+    defineField({
+      name: 'home_about_us_block',
+      title: 'Sekcja o nas',
+      type: 'about_us_block'
     })
   ]
 })
