@@ -1,11 +1,3 @@
-import {
-  FcContacts,
-  FcHome,
-  FcIdea,
-  FcPanorama,
-  FcSportsMode
-} from 'react-icons/fc'
-
 // @ts-expect-error :: There may be a problem with the types, but it's not a problem for us
 export const structure = (S) =>
   S.list()
@@ -14,29 +6,24 @@ export const structure = (S) =>
       S.listItem()
         .id('home')
         .title('Strona główna')
-        .child(S.document().schemaType('home'))
-        .icon(FcHome),
+        .child(S.document().schemaType('home')),
       S.divider(),
       S.listItem()
         .id('banners')
         .title('Banery')
-        .child(S.documentTypeList('banner_item').title('Banery'))
-        .icon(FcPanorama),
+        .child(S.documentTypeList('banner_item').title('Banery')),
       S.listItem()
         .id('values')
         .title('Wartości')
-        .child(S.documentTypeList('value_item').title('Wartości'))
-        .icon(FcIdea),
+        .child(S.documentTypeList('value_item').title('Wartości')),
       S.divider(),
       S.listItem()
         .id('sports')
         .title('Dyscypliny sportowe')
-        .child(S.documentTypeList('sport_item').title('Dyscypliny sportowe'))
-        .icon(FcSportsMode),
+        .child(S.documentTypeList('sport_item').title('Dyscypliny sportowe')),
       S.divider(),
       S.listItem()
         .id('company')
         .title('Dane firmy')
         .child(S.document().schemaType('company_data'))
-        .icon(FcContacts)
     ])
