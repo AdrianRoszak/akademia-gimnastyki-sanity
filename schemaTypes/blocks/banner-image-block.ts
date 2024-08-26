@@ -16,8 +16,8 @@ export const bannerImageBlock = defineType({
           if (!value) {
             return 'Zalecane jest dodanie zdjęcia głównego'
           }
-          return { message: 'Dodaj zdjęcie główne', level: 'error' }
-        }).error(),
+          return true
+        }),
         Rule.custom((value: { image: ImageType }) => {
           if (value && value.image) {
             const { image } = value

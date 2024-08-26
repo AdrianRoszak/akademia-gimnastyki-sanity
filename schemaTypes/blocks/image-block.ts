@@ -12,6 +12,12 @@ export const imageBlock = defineType({
         hotspot: true,
         accept: 'image/jpg, image/jpeg, image/png, image/webp'
       }
+    }),
+    defineField({
+      name: 'alt',
+      title: 'Tekst alternatywny',
+      type: 'string',
+      validation: (Rule) => Rule.required()
     })
   ]
 })
