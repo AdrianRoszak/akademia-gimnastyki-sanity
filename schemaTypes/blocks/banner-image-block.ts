@@ -22,10 +22,10 @@ export const bannerImageBlock = defineType({
           if (value && value.image) {
             const { image } = value
             return validateImage(image, ['jpg', 'jpeg', 'png', 'webp'], {
-              maxWidth: 1920,
-              maxHeight: 950,
-              minWidth: 1920,
-              minHeight: 950
+              maxWidth: 1100,
+              maxHeight: 750,
+              minWidth: 900,
+              minHeight: 600
             })
           }
           return true // Add this line to return a valid result when value.image is undefined

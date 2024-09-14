@@ -18,6 +18,12 @@ export const aboutUsBlock = defineType({
       type: 'text',
       description: 'Wprowadź krótki opis sekcji.',
       rows: 2
+    }),
+    defineField({
+      name: 'about_us_block_content',
+      title: 'Treść',
+      type: 'blockContent',
+      description: 'Wprowadź treść sekcji.'
     })
   ]
 })
