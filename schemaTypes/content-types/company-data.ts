@@ -10,6 +10,16 @@ export const companyData = defineType({
       title: 'Nazwa firmy',
       type: 'string',
       description: 'Wprowadź nazwę firmy, która będzie wyświetlana na stronie',
+      validation: (Rule) => Rule.required().error('Nazwa firmy jest wymagana.')
+    }),
+    defineField({
+      name: 'company_data_logo',
+      title: 'Logo firmy',
+      type: 'image',
+      description: 'Dodaj logo firmy, które będzie wyświetlane na stronie',
+      options: {
+        hotspot: true
+      },
       validation: (Rule) => Rule.required()
     }),
     defineField({
