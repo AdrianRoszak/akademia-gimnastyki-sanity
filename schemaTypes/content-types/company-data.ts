@@ -15,12 +15,8 @@ export const companyData = defineType({
     defineField({
       name: 'company_data_logo',
       title: 'Logo firmy',
-      type: 'image',
-      description: 'Dodaj logo firmy, które będzie wyświetlane na stronie',
-      options: {
-        hotspot: true
-      },
-      validation: (Rule) => Rule.required()
+      type: 'image_block',
+      description: 'Dodaj logo firmy, które będzie wyświetlane na stronie'
     }),
     defineField({
       name: 'company_data_phone',
