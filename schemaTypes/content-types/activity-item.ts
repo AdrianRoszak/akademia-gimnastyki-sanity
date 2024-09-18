@@ -6,25 +6,25 @@ export const activityItem = defineType({
   type: 'document',
   fields: [
     defineField({
-      name: 'sport_item_name',
+      name: 'activity_item_name',
       title: 'Nazwa dyscypliny',
       type: 'string',
       validation: (Rule) => Rule.required()
     }),
     defineField({
-      name: 'sport_item_image',
+      name: 'activity_item_image',
       title: 'Zdjęcie',
       type: 'image_block',
       validation: (Rule) => Rule.required()
     }),
     defineField({
-      name: 'sport_item_description',
+      name: 'activity_item_description',
       title: 'Opis dyscypliny',
       type: 'text',
       validation: (Rule) => Rule.required()
     }),
     defineField({
-      name: 'sport_item_slug',
+      name: 'activity_item_slug',
       title: 'Slug',
       type: 'slug',
       options: {
