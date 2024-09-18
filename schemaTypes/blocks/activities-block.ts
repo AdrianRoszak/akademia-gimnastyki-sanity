@@ -18,6 +18,11 @@ export const activitiesBlock = defineType({
       type: 'text',
       description: 'Wprowadź krótki opis sekcji.',
       rows: 2
+    }),
+    defineField({
+      name: 'activities_block_activities_selector',
+      title: 'Dyscypliny',
+      type: 'activity_selector'
     })
   ]
 })

@@ -1,7 +1,7 @@
 import { defineField, defineType } from 'sanity'
 
-export const sportItem = defineType({
-  name: 'sport_item',
+export const activityItem = defineType({
+  name: 'activity_item',
   title: 'Dyscyplina sportowa',
   type: 'document',
   fields: [
