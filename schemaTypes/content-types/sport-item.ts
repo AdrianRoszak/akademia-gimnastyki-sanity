@@ -12,6 +12,12 @@ export const sportItem = defineType({
       validation: (Rule) => Rule.required()
     }),
     defineField({
+      name: 'sport_item_image',
+      title: 'Zdjęcie',
+      type: 'image_block',
+      validation: (Rule) => Rule.required()
+    }),
+    defineField({
       name: 'sport_item_description',
       title: 'Opis dyscypliny',
       type: 'text',

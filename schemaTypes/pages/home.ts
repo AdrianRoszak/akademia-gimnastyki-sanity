@@ -21,14 +21,24 @@ export const home = defineType({
         'Wybierz banery z listy. Jeśli dodasz więcej niż jeden, będą wyświetlane w karuzeli.'
     }),
     defineField({
-      name: 'home_values_block',
-      title: 'Sekcja wartości',
-      type: 'values_block'
-    }),
-    defineField({
       name: 'home_about_us_block',
       title: 'Sekcja o nas',
       type: 'about_us_block'
+    }),
+    defineField({
+      name: 'home_offer_block',
+      title: 'Sekcja oferta',
+      type: 'offer_block'
+    }),
+    defineField({
+      name: 'home_activities_block',
+      title: 'Sekcja dyscypliny',
+      type: 'activities_block'
+    }),
+    defineField({
+      name: 'home_values_block',
+      title: 'Sekcja wartości',
+      type: 'values_block'
     })
   ]
 })
