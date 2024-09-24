@@ -1,10 +1,12 @@
 import { defineField, defineType, type SanityDocument } from 'sanity'
 
 function validateRequiredField(
-  _value: string | undefined | unknown,
+  value: string | undefined | unknown,
   document: SanityDocument | undefined
 ) {
-  return document?.event_item_template_switcher ? true : 'Pole jest wymagane'
+  return document?.event_item_template_switcher || value
+    ? true
+    : 'Pole jest wymagane'
 }
 
 export const eventItem = defineType({
@@ -12,6 +14,13 @@ export const eventItem = defineType({
   title: 'Wydarzenie',
   type: 'document',
   fields: [
+    defineField({
+      name: 'event_item_name',
+      title: 'Nazwa wydarzenia',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+      description: 'Dodaj nazwę wydarzenia.'
+    }),
     defineField({
       name: 'event_item_template_switcher',
       title: 'Zastosuj szablon',
@@ -25,19 +34,13 @@ export const eventItem = defineType({
       type: 'reference',
       to: [{ type: 'event_item_template' }],
       description: 'Wybierz szablon wydarzenia',
-      hidden: ({ document }) => !document?.event_item_template_switcher
-    }),
-    defineField({
-      name: 'event_item_name',
-      title: 'Nazwa wydarzenia',
-      type: 'string',
+      hidden: ({ document }) => !document?.event_item_template_switcher,
       validation: (Rule) =>
-        Rule.custom((value, { document }) =>
-          validateRequiredField(value, document)
-        ),
-      description:
-        'Dodaj nazwę wydarzenia. Będzie ona widoczna na stronie wydarzenia.',
-      hidden: ({ document }) => !!document?.event_item_template_switcher
+        Rule.custom((value, { document }) => {
+          return document?.event_item_template_switcher && !value
+            ? 'Pole jest wymagane'
+            : true
+        })
     }),
     defineField({
       name: 'event_item_image',

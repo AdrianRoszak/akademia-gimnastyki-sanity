@@ -13,14 +13,6 @@ export const eventTemplate = defineType({
         'Dodaj nazwę szablonu. Będzie ona widoczna w panelu zarządzania wydarzeniami.'
     }),
     defineField({
-      name: 'event_item_name',
-      title: 'Nazwa wydarzenia',
-      type: 'string',
-      validation: (Rule) => Rule.required(),
-      description:
-        'Dodaj nazwę wydarzenia. Będzie ona widoczna na stronie wydarzenia.'
-    }),
-    defineField({
       name: 'event_item_image',
       title: 'Zdjęcie',
       type: 'image_block',
