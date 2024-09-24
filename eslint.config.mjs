@@ -48,6 +48,7 @@ export default [
       'object-curly-spacing': 'off',
       'allow-parens': 'off',
       'implicit-arrow-linebreak': 'off',
+      'function-paren-newline': 'off',
       indent: 'off',
       camelcase: 'off',
       'no-console': [
