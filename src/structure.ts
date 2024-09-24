@@ -16,6 +16,10 @@ export const structure = (S) =>
         .id('values')
         .title('Wartości')
         .child(S.documentTypeList('value_item').title('Wartości')),
+      S.listItem()
+        .id('events')
+        .title('Wydarzenia')
+        .child(S.documentTypeList('event_item').title('Wydarzenia')),
       S.divider(),
       S.listItem()
         .id('sports')

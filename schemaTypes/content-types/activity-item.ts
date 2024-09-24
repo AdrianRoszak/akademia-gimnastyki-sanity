@@ -20,7 +20,7 @@ export const activityItem = defineType({
     defineField({
       name: 'activity_item_description',
       title: 'Opis dyscypliny',
-      type: 'text',
+      type: 'blockContent',
       validation: (Rule) => Rule.required()
     }),
     defineField({
@@ -28,7 +28,7 @@ export const activityItem = defineType({
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'sport_item_name'
+        source: 'activity_item_name'
       },
       validation: (Rule) => Rule.required()
     })

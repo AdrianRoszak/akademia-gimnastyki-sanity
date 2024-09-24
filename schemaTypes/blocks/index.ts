@@ -1,6 +1,7 @@
 export { aboutUsBlock } from './about-us-block'
 export { activitiesBlock } from './activities-block'
 export { bannerImageBlock } from './banner-image-block'
+export { eventsBlock } from './events-block'
 export { imageBlock } from './image-block'
 export { offerBlock } from './offer-block'
 export { valuesBlock } from './values-block'
