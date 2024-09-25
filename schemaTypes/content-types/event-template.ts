@@ -26,5 +26,17 @@ export const eventTemplate = defineType({
       validation: (Rule) => Rule.required(),
       description: 'Dodaj opis wydarzenia'
     })
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'event_item_template_name',
+      media: 'event_item_image'
+    },
+    prepare(selection) {
+      return {
+        title: selection.title,
+        media: selection.media.image
+      }
+    }
+  }
 })

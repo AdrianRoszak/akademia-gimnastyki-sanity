@@ -76,14 +76,63 @@ export const eventItem = defineType({
       title: 'Data rozpoczęcia',
       type: 'datetime',
       validation: (Rule) => Rule.required(),
-      description: 'Dodaj datę i godzinę rozpoczęcia wydarzenia.'
+      description:
+        'Dodaj datę i godzinę rozpoczęcia wydarzenia. Format daty: YYYY-MM-DD HH:MM'
     }),
     defineField({
       name: 'event_end_date',
       title: 'Data zakończenia',
       type: 'datetime',
-      validation: (Rule) => Rule.required(),
-      description: 'Dodaj datę i godzinę zakończenia wydarzenia.'
+      validation: (Rule) =>
+        Rule.required()
+          .min(Rule.valueOfField('event_start_date'))
+          .error(
+            'Data zakończenia nie może być wcześniejsza niż data rozpoczęcia.'
+          ),
+      description:
+        'Dodaj datę i godzinę zakończenia wydarzenia. Format daty: YYYY-MM-DD HH:MM'
+    }),
+    defineField({
+      name: 'event_item_link',
+      title: 'Link',
+      type: 'url',
+      description: 'Dodaj link do zapisów na wydarzenie.',
+      validation: (Rule) => [
+        Rule.custom((url) => {
+          if (!url) {
+            return true // Allow empty values (handled by required() rule)
+          }
+          return true
+        }).warning(),
+        Rule.custom((url) => {
+          if (!url) {
+            return true // Allow empty values (handled by required() rule)
+          }
+          const regex =
+            /^https:\/\/(www\.)?([a-zA-Z0-9\-]+\.)?[a-zA-Z0-9\-]+\.[a-zA-Z]{2,}(\/[a-zA-Z0-9\-_\/]*)?$/
+          return regex.test(url)
+            ? true
+            : 'Link musi być poprawnym adresem URL, np. https://example.com'
+        })
+      ]
     })
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'event_item_name',
+      media: 'event_item_image',
+      refMedia: 'event_item_template.event_item_image'
+    },
+    prepare(selection) {
+      const media = selection.media.image
+        ? selection.media.image
+        : selection.refMedia.image
+      const title = selection.title
+
+      return {
+        title,
+        media
+      }
+    }
+  }
 })

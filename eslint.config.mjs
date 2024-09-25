@@ -49,6 +49,8 @@ export default [
       'allow-parens': 'off',
       'implicit-arrow-linebreak': 'off',
       'function-paren-newline': 'off',
+      'max-len': 'off',
+      'no-useless-escape': 'off',
       indent: 'off',
       camelcase: 'off',
       'no-console': [
