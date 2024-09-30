@@ -57,6 +57,13 @@ export const companyData = defineType({
           return true
         })
     }),
+    defineField({
+      name: 'company_data_account_number',
+      title: 'Numer konta bankowego',
+      type: 'string',
+      description:
+        'Wprowadź numer konta bankowego, który będzie wyświetlany na stronie.'
+    }),
     {
       name: 'company_data_address',
       title: 'Adres firmy',
