@@ -22,6 +22,13 @@ export const eventItem = defineType({
       description: 'Dodaj nazwę wydarzenia.'
     }),
     defineField({
+      name: 'event_item_price',
+      title: 'Cena',
+      type: 'number',
+      validation: (Rule) => Rule.required(),
+      description: 'Dodaj cenę wydarzenia.'
+    }),
+    defineField({
       name: 'event_item_template_switcher',
       title: 'Zastosuj szablon',
       type: 'boolean',
@@ -103,17 +110,17 @@ export const eventItem = defineType({
             return true // Allow empty values (handled by required() rule)
           }
           return true
-        }).warning(),
-        Rule.custom((url) => {
-          if (!url) {
-            return true // Allow empty values (handled by required() rule)
-          }
-          const regex =
-            /^https:\/\/(www\.)?([a-zA-Z0-9\-]+\.)?[a-zA-Z0-9\-]+\.[a-zA-Z]{2,}(\/[a-zA-Z0-9\-_\/]*)?$/
-          return regex.test(url)
-            ? true
-            : 'Link musi być poprawnym adresem URL, np. https://example.com'
-        })
+        }).warning()
+        // Rule.custom((url) => {
+        //   if (!url) {
+        //     return true // Allow empty values (handled by required() rule)
+        //   }
+        //   const regex =
+        //     /^https:\/\/(www\.)?([a-zA-Z0-9\-]+\.)?[a-zA-Z0-9\-]+\.[a-zA-Z]{2,}(\/[a-zA-Z0-9\-_\/]*)?$/
+        //   return regex.test(url)
+        //     ? true
+        //     : 'Link musi być poprawnym adresem URL, np. https://example.com'
+        // })
       ]
     })
   ],

@@ -25,7 +25,6 @@ export const home = defineType({
       title: 'Sekcja o nas',
       type: 'about_us_block'
     }),
-
     defineField({
       name: 'home_offer_block',
       title: 'Sekcja oferta',
