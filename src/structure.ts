@@ -7,6 +7,12 @@ export const structure = (S) =>
         .id('home')
         .title('Strona główna')
         .child(S.document().schemaType('home')),
+      S.listItem()
+        .id('sports')
+        .title('Dyscypliny sportowe')
+        .child(
+          S.documentTypeList('activity_item').title('Dyscypliny sportowe')
+        ),
       S.divider(),
       S.listItem()
         .id('banners')
@@ -26,13 +32,6 @@ export const structure = (S) =>
         .title('Szablony wydarzeń')
         .child(
           S.documentTypeList('event_item_template').title('Szablony wydarzeń')
-        ),
-      S.divider(),
-      S.listItem()
-        .id('sports')
-        .title('Dyscypliny sportowe')
-        .child(
-          S.documentTypeList('activity_item').title('Dyscypliny sportowe')
         ),
       S.divider(),
       S.listItem()
