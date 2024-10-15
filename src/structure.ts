@@ -13,6 +13,10 @@ export const structure = (S) =>
         .child(
           S.documentTypeList('activity_item').title('Dyscypliny sportowe')
         ),
+      S.listItem()
+        .id('faq')
+        .title('Strona FAQ')
+        .child(S.document().schemaType('faq').title('FAQ')),
       S.divider(),
       S.listItem()
         .id('banners')
@@ -33,6 +37,11 @@ export const structure = (S) =>
         .child(
           S.documentTypeList('event_item_template').title('Szablony wydarzeń')
         ),
+      S.divider(),
+      S.listItem()
+        .id('faqs')
+        .title('FAQ')
+        .child(S.documentTypeList('faq_item').title('FAQ')),
       S.divider(),
       S.listItem()
         .id('company')
