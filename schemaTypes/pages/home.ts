@@ -5,6 +5,36 @@ export const home = defineType({
   title: 'Strona główna',
   type: 'document',
   __experimental_formPreviewTitle: false,
+  groups: [
+    {
+      title: 'Meta',
+      name: 'meta'
+    },
+    {
+      title: 'Sekcja banerów',
+      name: 'banners'
+    },
+    {
+      title: 'Sekcja o nas',
+      name: 'about_us'
+    },
+    {
+      title: 'Sekcja oferta',
+      name: 'offer'
+    },
+    {
+      title: 'Sekcja dyscypliny',
+      name: 'activities'
+    },
+    {
+      title: 'Sekcja wartości',
+      name: 'values'
+    },
+    {
+      title: 'Sekcja wydarzenia',
+      name: 'events'
+    }
+  ],
   fields: [
     defineField({
       name: 'home_title',
@@ -18,32 +48,45 @@ export const home = defineType({
       title: 'Sekcja banerów',
       type: 'banner_selector',
       description:
-        'Wybierz banery z listy. Jeśli dodasz więcej niż jeden, będą wyświetlane w karuzeli.'
+        'Wybierz banery z listy. Jeśli dodasz więcej niż jeden, będą wyświetlane w karuzeli.',
+      group: 'banners'
     }),
     defineField({
       name: 'home_about_us_block',
       title: 'Sekcja o nas',
-      type: 'about_us_block'
+      type: 'about_us_block',
+      group: 'about_us'
     }),
     defineField({
       name: 'home_offer_block',
       title: 'Sekcja oferta',
-      type: 'offer_block'
+      type: 'offer_block',
+      group: 'offer',
+      hidden: true
     }),
     defineField({
       name: 'home_activities_block',
       title: 'Sekcja dyscypliny',
-      type: 'activities_block'
+      type: 'activities_block',
+      group: 'activities'
     }),
     defineField({
       name: 'home_values_block',
       title: 'Sekcja wartości',
-      type: 'values_block'
+      type: 'values_block',
+      group: 'values'
     }),
     defineField({
       name: 'home_events_block',
       title: 'Sekcja wydarzenia',
-      type: 'events_block'
+      type: 'events_block',
+      group: 'events'
+    }),
+    defineField({
+      name: 'home_meta_data_block',
+      title: 'Meta dane',
+      type: 'meta_data',
+      group: 'meta'
     })
   ]
 })

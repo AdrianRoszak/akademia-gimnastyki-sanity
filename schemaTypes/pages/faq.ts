@@ -5,6 +5,12 @@ export const faq = defineType({
   title: 'FAQ',
   type: 'document',
   __experimental_formPreviewTitle: false,
+  groups: [
+    {
+      title: 'Meta',
+      name: 'meta'
+    }
+  ],
   fields: [
     defineField({
       name: 'faq_page_title',
@@ -30,6 +36,12 @@ export const faq = defineType({
       title: 'Wybierz pytania',
       type: 'faq_selector',
       validation: (Rule) => Rule.required()
+    }),
+    defineField({
+      name: 'faq_meta_data_block',
+      title: 'Meta dane',
+      type: 'meta_data',
+      group: 'meta'
     })
   ]
 })
