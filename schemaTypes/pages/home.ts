@@ -7,10 +7,6 @@ export const home = defineType({
   __experimental_formPreviewTitle: false,
   groups: [
     {
-      title: 'Meta',
-      name: 'meta'
-    },
-    {
       title: 'Sekcja banerów',
       name: 'banners'
     },
@@ -33,6 +29,10 @@ export const home = defineType({
     {
       title: 'Sekcja wydarzenia',
       name: 'events'
+    },
+    {
+      title: 'Meta',
+      name: 'meta'
     }
   ],
   fields: [

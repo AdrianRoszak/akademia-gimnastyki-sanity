@@ -27,5 +27,19 @@ export const bannerItem = defineType({
       type: 'banner_image_block',
       description: 'Wprowadź zdjęcia banera.'
     })
-  ]
+  ],
+  preview: {
+    select: {
+      title: 'banner_item_heading',
+      media: 'banner_item_images.baner_image_block_main_image'
+    },
+    prepare(selection) {
+      const { title, media } = selection
+
+      return {
+        title,
+        media: media.image
+      }
+    }
+  }
 })
