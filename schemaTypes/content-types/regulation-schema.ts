@@ -27,6 +27,17 @@ export const regulationSchema = defineType({
       type: 'blockContent',
       description: 'Wprowadź treść regulacji.',
       validation: (Rule) => Rule.required()
+    }),
+    defineField({
+      name: 'regulation_slug',
+      title: 'Slug',
+      type: 'slug',
+      description: 'Wprowadź unikalny slug dla dokumentu regulacyjnego',
+      validation: (Rule) => Rule.required(),
+      options: {
+        source: 'regulation_heading',
+        maxLength: 120
+      }
     })
   ]
 })
