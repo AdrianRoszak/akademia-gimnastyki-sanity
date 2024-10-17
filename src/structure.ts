@@ -46,5 +46,9 @@ export const structure = (S) =>
       S.listItem()
         .id('company')
         .title('Dane firmy')
-        .child(S.document().schemaType('company_data'))
+        .child(S.document().schemaType('company_data')),
+      S.listItem()
+        .id('regulations')
+        .title('Regulaminy i dokumenty')
+        .child(S.documentTypeList('regulation').title('Regulaminy i dokumenty'))
     ])
