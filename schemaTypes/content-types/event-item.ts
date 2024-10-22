@@ -61,6 +61,21 @@ export const eventItem = defineType({
       hidden: ({ document }) => !!document?.event_item_template_switcher
     }),
     defineField({
+      name: 'event_item_background_color',
+      title: 'Kolor tła',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Pomarańczowy', value: '#ef922e' },
+          { title: 'Turkusowy', value: '#15c5cb' }
+        ],
+        layout: 'radio' // Umożliwia wybór w formie przycisków radiowych
+      },
+      description: 'Wybierz kolor tła dla elementu.',
+      validation: (Rule) =>
+        Rule.required().error('Pole koloru tła jest wymagane.')
+    }),
+    defineField({
       name: 'event_item_description',
       title: 'Opis wydarzenia',
       type: 'blockContent',
