@@ -1,6 +1,7 @@
 export { activityItem } from './activity-item'
 export { bannerItem } from './banner-item'
 export { blockContent } from './block-content'
+export { campItem } from './camp-item'
 export { companyData } from './company-data'
 export { eventItem } from './event-item'
 export { eventTemplate } from './event-template'

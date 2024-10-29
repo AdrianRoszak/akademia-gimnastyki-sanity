@@ -1,5 +1,6 @@
 export { activitySelector } from './activity-selector'
 export { bannerSelector } from './banner-selector'
+export { campSelector } from './camp-selector'
 export { eventSelector } from './event-selector'
 export { faqSelector } from './faq-selector'
 export { valueSelector } from './value-selector'

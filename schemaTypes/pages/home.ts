@@ -27,6 +27,10 @@ export const home = defineType({
       name: 'values'
     },
     {
+      title: 'Sekcja obozy',
+      name: 'camps'
+    },
+    {
       title: 'Sekcja wydarzenia',
       name: 'events'
     },
@@ -75,6 +79,12 @@ export const home = defineType({
       title: 'Sekcja wartości',
       type: 'values_block',
       group: 'values'
+    }),
+    defineField({
+      name: 'home_camp_block',
+      title: 'Sekcja obozy',
+      type: 'camps_block',
+      group: 'camps'
     }),
     defineField({
       name: 'home_events_block',

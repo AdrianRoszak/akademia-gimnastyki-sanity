@@ -28,6 +28,11 @@ export const structure = (S) =>
         .child(S.documentTypeList('value_item').title('Wartości')),
       S.divider(),
       S.listItem()
+        .id('camps')
+        .title('Obozy')
+        .child(S.documentTypeList('camp_item').title('Obozy')),
+      S.divider(),
+      S.listItem()
         .id('events')
         .title('Wydarzenia')
         .child(S.documentTypeList('event_item').title('Wydarzenia')),
