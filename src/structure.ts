@@ -55,5 +55,11 @@ export const structure = (S) =>
       S.listItem()
         .id('regulations')
         .title('Regulaminy i dokumenty')
-        .child(S.documentTypeList('regulation').title('Regulaminy i dokumenty'))
+        .child(
+          S.documentTypeList('regulation').title('Regulaminy i dokumenty')
+        ),
+      S.listItem()
+        .id('registration')
+        .title('Formularze zapisów')
+        .child(S.document().schemaType('registration'))
     ])

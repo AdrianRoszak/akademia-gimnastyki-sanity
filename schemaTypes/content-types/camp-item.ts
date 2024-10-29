@@ -54,24 +54,7 @@ export const campItem = defineType({
       title: 'Opis obozu',
       type: 'blockContent',
       validation: (Rule) => Rule.required()
-    },
-    {
-      name: 'camp_item_link',
-      title: 'Link do zapisów',
-      type: 'url',
-      description: 'Link do zapisów na obóz',
-      validation: (Rule) => Rule.required()
     }
-    // TODO: Uncomment slug field if needed
-    // {
-    //   name: 'camp_item_slug',
-    //   title: 'Slug',
-    //   type: 'slug',
-    //   options: {
-    //     source: 'camp_item_name'
-    //   },
-    //   validation: (Rule) => Rule.required()
-    // }
   ],
   preview: {
     select: {
