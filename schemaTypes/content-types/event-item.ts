@@ -116,7 +116,7 @@ export const eventItem = defineType({
     }),
     defineField({
       name: 'event_item_link',
-      title: 'Link',
+      title: 'Link do zapisów',
       type: 'url',
       description: 'Dodaj link do zapisów na wydarzenie.',
       validation: (Rule) => [

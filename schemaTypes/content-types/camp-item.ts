@@ -9,24 +9,27 @@ export const campItem = defineType({
       name: 'camp_item_name',
       title: 'Nazwa obozu',
       type: 'string',
+      description: 'Dodaj nazwę obozu',
       validation: (Rule) => Rule.required()
     },
     {
-      name: 'camp_item_image',
-      title: 'Zdjęcie',
-      type: 'image_block',
-      validation: (Rule) => Rule.required()
-    },
-    {
-      name: 'camp_item_description',
-      title: 'Opis obozu',
-      type: 'blockContent',
+      name: 'camp_item_place',
+      title: 'Miejsce',
+      type: 'string',
+      description: 'Dodaj miejsce, w którym odbędzie się obóz',
       validation: (Rule) => Rule.required()
     },
     {
       name: 'camp_item_price',
       title: 'Cena',
       type: 'number',
+      description: 'Dodaj cenę obozu',
+      validation: (Rule) => Rule.required()
+    },
+    {
+      name: 'camp_item_image',
+      title: 'Zdjęcie',
+      type: 'image_block',
       validation: (Rule) => Rule.required()
     },
     {
@@ -47,14 +50,28 @@ export const campItem = defineType({
           .error('Data zakończenia musi być późniejsza niż data rozpoczęcia.')
     },
     {
-      name: 'camp_item_slug',
-      title: 'Slug',
-      type: 'slug',
-      options: {
-        source: 'camp_item_name'
-      },
+      name: 'camp_item_description',
+      title: 'Opis obozu',
+      type: 'blockContent',
+      validation: (Rule) => Rule.required()
+    },
+    {
+      name: 'camp_item_link',
+      title: 'Link do zapisów',
+      type: 'url',
+      description: 'Link do zapisów na obóz',
       validation: (Rule) => Rule.required()
     }
+    // TODO: Uncomment slug field if needed
+    // {
+    //   name: 'camp_item_slug',
+    //   title: 'Slug',
+    //   type: 'slug',
+    //   options: {
+    //     source: 'camp_item_name'
+    //   },
+    //   validation: (Rule) => Rule.required()
+    // }
   ],
   preview: {
     select: {
