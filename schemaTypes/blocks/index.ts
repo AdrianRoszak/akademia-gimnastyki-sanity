@@ -1,6 +1,7 @@
 export { aboutUsBlock } from './about-us-block'
 export { activitiesBlock } from './activities-block'
 export { bannerImageBlock } from './banner-image-block'
+export { birthdayLocationBlock } from './birthday-location-block'
 export { campsBlock } from './camps_block'
 export { eventsBlock } from './events-block'
 export { imageBlock } from './image-block'

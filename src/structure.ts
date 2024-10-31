@@ -14,6 +14,10 @@ export const structure = (S) =>
           S.documentTypeList('activity_item').title('Dyscypliny sportowe')
         ),
       S.listItem()
+        .id('birthday')
+        .title('Urodziny')
+        .child(S.document().schemaType('birthday')),
+      S.listItem()
         .id('faq')
         .title('Strona FAQ')
         .child(S.document().schemaType('faq').title('FAQ')),
@@ -48,6 +52,10 @@ export const structure = (S) =>
         .title('FAQ')
         .child(S.documentTypeList('faq_item').title('FAQ')),
       S.divider(),
+      S.listItem()
+        .id('locations')
+        .title('Lokalizacje')
+        .child(S.documentTypeList('location_item').title('Lokalizacje')),
       S.listItem()
         .id('company')
         .title('Dane firmy')
