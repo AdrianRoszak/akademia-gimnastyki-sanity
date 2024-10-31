@@ -8,7 +8,8 @@ export const registration = defineType({
     {
       name: 'registration_name',
       title: 'Tytuł',
-      type: 'string'
+      type: 'string',
+      hidden: true
     },
     {
       name: 'registration_events',

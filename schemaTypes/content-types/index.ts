@@ -1,6 +1,6 @@
 export { activityItem } from './activity-item'
 export { bannerItem } from './banner-item'
-export { birthdayLocationItem } from './birthday-location-item'
+export * from './birthday'
 export { blockContent } from './block-content'
 export { campItem } from './camp-item'
 export { companyData } from './company-data'
