@@ -62,7 +62,7 @@ export const structure = (S) =>
         .child(S.documentTypeList('location_item').title('Lokalizacje')),
       S.listItem()
         .id('company')
-        .title('Dane firmy')
+        .title('Dane klubu')
         .child(S.document().schemaType('company_data')),
       S.listItem()
         .id('regulations')
