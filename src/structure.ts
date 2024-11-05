@@ -15,7 +15,7 @@ export const structure = (S) =>
         ),
       S.listItem()
         .id('birthday')
-        .title('Urodziny')
+        .title('Strona urodziny')
         .child(S.document().schemaType('birthday')),
       S.listItem()
         .id('faq')
