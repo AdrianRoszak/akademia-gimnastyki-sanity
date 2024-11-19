@@ -32,7 +32,7 @@ export const camps = defineType({
       name: 'camps_title',
       title: 'Tytuł',
       type: 'string',
-      initialValue: 'Urodziny',
+      initialValue: 'Obozy',
       hidden: true
     }),
     defineField({
