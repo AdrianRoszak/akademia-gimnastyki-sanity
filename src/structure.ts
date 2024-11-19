@@ -14,6 +14,10 @@ export const structure = (S) =>
           S.documentTypeList('activity_item').title('Dyscypliny sportowe')
         ),
       S.listItem()
+        .id('page_camps')
+        .title('Strona obozy')
+        .child(S.document().schemaType('camps')),
+      S.listItem()
         .id('birthday')
         .title('Strona urodziny')
         .child(S.document().schemaType('birthday')),

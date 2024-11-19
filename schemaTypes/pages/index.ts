@@ -1,4 +1,5 @@
 export { birthday } from './birthday'
+export { camps } from './camps'
 export { faq } from './faq'
 export { home } from './home'
 export { registration } from './registration'
