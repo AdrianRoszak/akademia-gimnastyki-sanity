@@ -36,11 +36,12 @@ export const birthday = defineType({
       hidden: true
     }),
     defineField({
-      name: 'birthday_banner',
-      title: 'Baner',
-      type: 'banner_item',
-      description: 'Dodaj baner na stronie urodzin.',
-      group: 'banner'
+      name: 'birthday_banner_selector',
+      title: 'Sekcja banerów',
+      type: 'banner_selector',
+      description: 'Wybierz baner z listy.',
+      group: 'banner',
+      validation: (Rule) => Rule.required()
     }),
     defineField({
       name: 'birthday_intro',

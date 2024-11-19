@@ -52,7 +52,7 @@ export const home = defineType({
       title: 'Sekcja banerów',
       type: 'banner_selector',
       description:
-        'Wybierz banery z listy. Jeśli dodasz więcej niż jeden, będą wyświetlane w karuzeli.',
+        'Wybierz banery z listy. Jeśli dodasz więcej niż jeden, będą wyświetlane w karuzeli. Możesz dodać maksymalnie 4 banery.',
       group: 'banners'
     }),
     defineField({

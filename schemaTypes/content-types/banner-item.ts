@@ -26,6 +26,12 @@ export const bannerItem = defineType({
       title: 'Zdjęcia banera',
       type: 'banner_image_block',
       description: 'Wprowadź zdjęcia banera.'
+    }),
+    defineField({
+      name: 'banner_item_button',
+      title: 'Odnośnik',
+      type: 'string',
+      description: 'Dodaj odnośnik do przycisku na banerze (opcjonalnie).'
     })
   ],
   preview: {
