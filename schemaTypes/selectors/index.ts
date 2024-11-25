@@ -1,6 +1,6 @@
 export { activitySelector } from './activity-selector'
 export { bannerSelector } from './banner-selector'
-export { birthdayLocationSelector } from './birthday-localization-selector'
+export { birthdayLocationSelector } from './birthday-location-selector'
 export { campSelector } from './camp-selector'
 export { eventSelector } from './event-selector'
 export { faqSelector } from './faq-selector'
