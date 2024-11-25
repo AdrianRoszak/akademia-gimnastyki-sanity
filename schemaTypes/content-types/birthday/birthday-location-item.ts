@@ -14,13 +14,18 @@ export const birthdayLocationItem = defineType({
     defineField({
       name: 'birthday_location_item_location_selector',
       title: 'Lokalizacja',
-      type: 'reference',
-      to: [{ type: 'location_item' }],
-      description:
-        'Wybierz miejsce odbywania się urodzin z listy lokalizacji. Dodaj nowe miejsce w zakładce "Lokalizacje" w panelu bocznym.',
-      options: {
-        disableNew: true
-      }
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [{ type: 'location_item' }],
+          description:
+            'Wybierz miejsce odbywania się urodzin z listy lokalizacji. Dodaj nowe miejsce w zakładce "Lokalizacje" w panelu bocznym.',
+          options: {
+            disableNew: true
+          }
+        }
+      ]
     }),
     defineField({
       name: 'birthday_location_item_info',
