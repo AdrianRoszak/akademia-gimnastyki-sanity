@@ -12,15 +12,20 @@ export const birthdayLocationItem = defineType({
       description: 'Dodaj nazwę pozycji.'
     }),
     defineField({
-      name: 'birthday_location_item_location_selector',
+      name: 'birthday_location_item_location_list',
       title: 'Lokalizacja',
       type: 'array',
       of: [
         {
           type: 'reference',
+          title: 'Lokalizacja',
           to: [{ type: 'location_item' }],
           description:
             'Wybierz miejsce odbywania się urodzin z listy lokalizacji. Dodaj nowe miejsce w zakładce "Lokalizacje" w panelu bocznym.',
+          validation: (Rule) =>
+            Rule.error(
+              'Tylko elementy z zakładki ::lokalizacje:: są dozwolone.'
+            ),
           options: {
             disableNew: true
           }
