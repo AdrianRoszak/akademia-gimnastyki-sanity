@@ -17,7 +17,8 @@ export const buttonBlock = defineType({
       name: 'button_block_link',
       title: 'Odnośnik',
       type: 'string',
-      description: 'Wprowadź odnośnik przycisku'
+      description: 'Wprowadź odnośnik przycisku',
+      validation: (Rule) => Rule.required()
     })
   ]
 })
