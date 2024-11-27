@@ -40,6 +40,22 @@ export const locationItem = defineType({
       type: 'array',
       of: [{ type: 'image_block' }],
       description: 'Dodaj galerię zdjęć lokalizacji'
+    }),
+    defineField({
+      name: 'location_item_slug',
+      title: 'Slug',
+      type: 'slug',
+      description: 'Dodaj slug lokalizacji',
+      validation: (Rule) => Rule.required(),
+      options: {
+        source: 'location_item_name'
+      }
+    }),
+    defineField({
+      name: 'location_item_meta_data_block',
+      title: 'Meta dane',
+      type: 'meta_data_block',
+      description: 'Dodaj meta dane lokalizacji'
     })
   ]
 })
