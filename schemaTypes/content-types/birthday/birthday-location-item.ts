@@ -37,6 +37,12 @@ export const birthdayLocationItem = defineType({
       title: 'Dodatkowe informacje',
       type: 'blockContent',
       description: 'Dodaj dodatkowe informacje o miejscu.'
+    }),
+    defineField({
+      name: 'birthday_location_item_button',
+      title: 'Przycisk',
+      type: 'button_block',
+      description: 'Dodaj przycisk do rezerwacji urodzin.'
     })
   ]
 })
