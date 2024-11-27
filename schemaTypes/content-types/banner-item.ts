@@ -29,8 +29,8 @@ export const bannerItem = defineType({
     }),
     defineField({
       name: 'banner_item_button',
-      title: 'Odnośnik',
-      type: 'string',
+      title: 'Przycisk na banerze',
+      type: 'button_block',
       description: 'Dodaj odnośnik do przycisku na banerze (opcjonalnie).'
     })
   ],
