@@ -54,7 +54,7 @@ export const locationItem = defineType({
     defineField({
       name: 'location_item_meta_data_block',
       title: 'Meta dane',
-      type: 'meta_data_block',
+      type: 'meta_data',
       description: 'Dodaj meta dane lokalizacji'
     })
   ]
