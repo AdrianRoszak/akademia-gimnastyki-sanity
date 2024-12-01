@@ -7,20 +7,8 @@ export const camps = defineType({
   __experimental_formPreviewTitle: false,
   groups: [
     {
-      title: 'Baner',
-      name: 'banner'
-    },
-    {
       title: 'Sekcja intro',
       name: 'intro'
-    },
-    {
-      title: 'Sekcja ceny',
-      name: 'price'
-    },
-    {
-      title: 'Sekcja lokalizacji',
-      name: 'locations'
     },
     {
       title: 'Meta',
@@ -34,6 +22,17 @@ export const camps = defineType({
       type: 'string',
       initialValue: 'Obozy',
       hidden: true
+    }),
+    defineField({
+      name: 'camps_page_title',
+      title: 'Tytuł',
+      type: 'string',
+      initialValue: 'Strona FAQ',
+      description:
+        'Tytuł strony FAQ, który będzie widoczny jako tytuł podstrony. Maksymalna długość to 60 znaków.',
+      validation: (Rule) =>
+        Rule.required().max(60).error('Maksymalna długość tytułu to 60 znaków'),
+      group: 'intro'
     }),
     defineField({
       name: 'camps_intro',
