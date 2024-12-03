@@ -59,8 +59,7 @@ export const campItem = defineType({
       name: 'camp_item_long_description',
       title: 'Długi opis',
       type: 'blockContent',
-      description: 'Dodaj długi opis obozu',
-      validation: (Rule) => Rule.required()
+      description: 'Dodaj długi opis obozu'
     },
     {
       name: 'camp_item_program',
