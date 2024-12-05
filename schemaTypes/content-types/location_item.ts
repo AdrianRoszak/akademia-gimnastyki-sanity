@@ -42,6 +42,12 @@ export const locationItem = defineType({
       description: 'Dodaj galerię zdjęć lokalizacji'
     }),
     defineField({
+      name: 'location_item_directions_link',
+      title: 'Link do wskazówek dojazdu (Google Maps)',
+      type: 'url',
+      description: 'Dodaj link do wskazówek dojazdu'
+    }),
+    defineField({
       name: 'location_item_slug',
       title: 'Slug',
       type: 'slug',
