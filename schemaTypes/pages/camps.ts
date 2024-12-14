@@ -27,7 +27,7 @@ export const camps = defineType({
       name: 'camps_page_title',
       title: 'Tytuł',
       type: 'string',
-      initialValue: 'Strona FAQ',
+      initialValue: 'Stronna Obozów',
       description:
         'Tytuł strony FAQ, który będzie widoczny jako tytuł podstrony. Maksymalna długość to 60 znaków.',
       validation: (Rule) =>

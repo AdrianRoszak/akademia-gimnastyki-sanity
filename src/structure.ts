@@ -43,6 +43,10 @@ export const structure = (S) =>
         .id('camps')
         .title('Obozy')
         .child(S.documentTypeList('camp_item').title('Obozy')),
+      S.listItem()
+        .id('summer_camps')
+        .title('Półkolonie')
+        .child(S.document().schemaType('summer_camps').title('Półkolonie')),
       S.divider(),
       S.listItem()
         .id('events')
