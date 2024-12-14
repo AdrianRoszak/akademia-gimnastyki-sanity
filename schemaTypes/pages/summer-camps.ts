@@ -7,23 +7,23 @@ export const summerCamps = defineType({
   fields: [
     {
       name: 'summer_camps_name',
-      title: 'Nazwa obozu',
+      title: 'Tytuł strony',
       type: 'string',
-      description: 'Dodaj nazwę obozu',
+      description: 'Dodaj tytuł strony półkolonii',
       validation: (Rule) => Rule.required()
     },
     {
       name: 'summer_camps_place',
       title: 'Miejsce',
       type: 'string',
-      description: 'Dodaj miejsce, w którym odbędzie się obóz',
+      description: 'Dodaj miejsce, w którym odbędą się półkolonie',
       validation: (Rule) => Rule.required()
     },
     {
       name: 'summer_camps_price',
       title: 'Cena',
       type: 'number',
-      description: 'Dodaj cenę obozu',
+      description: 'Dodaj cenę półkolonii',
       validation: (Rule) => Rule.required()
     },
     {
@@ -37,11 +37,11 @@ export const summerCamps = defineType({
       title: 'Turnusy',
       type: 'array',
       of: [{ type: 'summer_camps_session_block' }],
-      description: 'Dodaj turnusy obozu'
+      description: 'Dodaj turnusy półkolonii'
     },
     {
       name: 'summer_camps_description',
-      title: 'Intro obozu',
+      title: 'Intro półkolonii',
       type: 'blockContent',
       validation: (Rule) => Rule.required()
     },
@@ -49,42 +49,32 @@ export const summerCamps = defineType({
       name: 'summer_camps_long_description',
       title: 'Długi opis',
       type: 'blockContent',
-      description: 'Dodaj długi opis obozu'
+      description: 'Dodaj długi opis półkolonii'
     },
     {
       name: 'summer_camps_program',
-      title: 'Program obozu',
+      title: 'Program półkolonii',
       type: 'blockContent',
-      description: 'Dodaj program obozu'
+      description: 'Dodaj program półkolonii'
     },
     {
       name: 'summer_camps_price_details',
       title: 'Szczegóły ceny',
       type: 'blockContent',
-      description: 'Dodaj elementy zawarte w cenie obozu'
+      description: 'Dodaj elementy zawarte w cenie półkolonii'
     },
     {
       name: 'summer_camps_gallery',
       title: 'Galeria',
       type: 'array',
       of: [{ type: 'image_block' }],
-      description: 'Dodaj galerię zdjęć obozu'
-    },
-    {
-      name: 'summer_camps_slug',
-      title: 'Slug',
-      type: 'slug',
-      description: 'Dodaj slug obozu',
-      validation: (Rule) => Rule.required(),
-      options: {
-        source: 'summer_camps_name'
-      }
+      description: 'Dodaj galerię zdjęć półkolonii'
     },
     {
       name: 'summer_camps_meta_data_block',
       title: 'Meta dane',
       type: 'meta_data',
-      description: 'Dodaj meta dane obozu'
+      description: 'Dodaj meta dane półkolonii'
     }
   ],
   preview: {
