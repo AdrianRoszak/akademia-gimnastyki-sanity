@@ -81,5 +81,5 @@ export const structure = (S) =>
       S.listItem()
         .id('registration')
         .title('Formularze zapisów')
-        .child(S.document().schemaType('registration'))
+        .child(S.documentTypeList('registration_item'))
     ])
