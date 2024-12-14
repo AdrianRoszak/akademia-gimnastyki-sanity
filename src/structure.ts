@@ -19,7 +19,7 @@ export const structure = (S) =>
         .child(S.document().schemaType('camps')),
       S.listItem()
         .id('summer_camps')
-        .title('Stroan półkolonie')
+        .title('Strona półkolonie')
         .child(S.document().schemaType('summer_camps')),
       S.listItem()
         .id('birthday')
