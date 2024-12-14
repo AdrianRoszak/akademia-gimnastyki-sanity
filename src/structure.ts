@@ -18,6 +18,10 @@ export const structure = (S) =>
         .title('Strona obozy')
         .child(S.document().schemaType('camps')),
       S.listItem()
+        .id('summer_camps')
+        .title('Stroan półkolonie')
+        .child(S.document().schemaType('summer_camps')),
+      S.listItem()
         .id('birthday')
         .title('Strona urodziny')
         .child(S.document().schemaType('birthday')),
@@ -43,10 +47,6 @@ export const structure = (S) =>
         .id('camps')
         .title('Obozy')
         .child(S.documentTypeList('camp_item').title('Obozy')),
-      S.listItem()
-        .id('summer_camps')
-        .title('Półkolonie')
-        .child(S.document().schemaType('summer_camps').title('Półkolonie')),
       S.divider(),
       S.listItem()
         .id('events')
