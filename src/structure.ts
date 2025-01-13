@@ -8,12 +8,6 @@ export const structure = (S) =>
         .title('Strona główna')
         .child(S.document().schemaType('home')),
       S.listItem()
-        .id('sports')
-        .title('Dyscypliny sportowe')
-        .child(
-          S.documentTypeList('activity_item').title('Dyscypliny sportowe')
-        ),
-      S.listItem()
         .id('page_camps')
         .title('Strona obozy')
         .child(S.document().schemaType('camps')),
@@ -43,6 +37,12 @@ export const structure = (S) =>
         .title('Zespół')
         .child(S.documentTypeList('team_member').title('Zespół')),
       S.divider(),
+      S.listItem()
+        .id('sports')
+        .title('Dyscypliny sportowe')
+        .child(
+          S.documentTypeList('activity_item').title('Dyscypliny sportowe')
+        ),
       S.listItem()
         .id('camps')
         .title('Obozy')
