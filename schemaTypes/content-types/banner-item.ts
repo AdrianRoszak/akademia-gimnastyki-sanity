@@ -32,6 +32,13 @@ export const bannerItem = defineType({
       title: 'Przycisk na banerze',
       type: 'button_block',
       description: 'Dodaj odnośnik do przycisku na banerze (opcjonalnie).'
+    }),
+    defineField({
+      name: 'banner_item_internal_link',
+      title: 'Link wewnętrzny',
+      type: 'reference',
+      to: [{ type: 'registration_item' }],
+      description: 'Wybierz stronę wewnętrzną, do której ma prowadzić przycisk.'
     })
   ],
   preview: {
