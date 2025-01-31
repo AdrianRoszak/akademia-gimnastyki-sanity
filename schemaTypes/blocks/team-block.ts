@@ -11,6 +11,12 @@ export const teamBlock = defineType({
       type: 'string',
       description: 'Wprowadź nagłówek sekcji. Maksymalnie 50 znaków.',
       validation: (Rule) => Rule.required().min(3).max(50)
+    }),
+    defineField({
+      name: 'team_block_team_members',
+      title: 'Członkowie zespołu',
+      type: 'team_member_selector',
+      description: 'Wybierz członków zespołu'
     })
   ]
 })
