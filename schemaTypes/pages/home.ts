@@ -35,6 +35,10 @@ export const home = defineType({
       name: 'events'
     },
     {
+      title: 'Sekcja zespół',
+      name: 'team'
+    },
+    {
       title: 'Meta',
       name: 'meta'
     }
@@ -91,6 +95,12 @@ export const home = defineType({
       title: 'Sekcja wydarzenia',
       type: 'events_block',
       group: 'events'
+    }),
+    defineField({
+      name: 'home_team_block',
+      title: 'Sekcja zespół',
+      type: 'team_block',
+      group: 'team'
     }),
     defineField({
       name: 'home_meta_data_block',

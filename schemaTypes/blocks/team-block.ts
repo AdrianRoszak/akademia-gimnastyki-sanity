@@ -1,6 +1,6 @@
 import { defineField, defineType } from 'sanity'
 
-export const valuesBlock = defineType({
+export const teamBlock = defineType({
   name: 'team_block',
   title: 'Zespół',
   type: 'object',
