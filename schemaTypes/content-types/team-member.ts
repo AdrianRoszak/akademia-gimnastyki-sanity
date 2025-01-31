@@ -1,6 +1,7 @@
 import { defineField, defineType } from 'sanity'
 
-import { type ImageType, validateImage } from '../utils'
+import { type ImageType } from '../utils'
+import { validateRequiredField } from './event-item'
 
 export type Value =
   | {
@@ -30,32 +31,12 @@ export const teamMember = defineType({
     defineField({
       name: 'team_member_image',
       title: 'Zdjęcie',
-      type: 'image',
+      type: 'image_block',
       description: 'Dodaj zdjęcie członka zespołu.',
-      options: {
-        hotspot: true,
-        accept: 'image/jpg, image/jpeg, image/png, image/webp'
-      },
-      validation: (Rule) => [
-        Rule.custom((value: Value) => {
-          if (!value) {
-            return 'Zalecane jest dodanie zdjęcia osoby.'
-          }
-          return true
-        }).warning(),
-        Rule.custom((value: Value) => {
-          if (value && value.image) {
-            const { image } = value
-            return validateImage(image, ['jpg', 'jpeg', 'png', 'webp'], {
-              maxWidth: 900,
-              maxHeight: 1200,
-              minWidth: 750,
-              minHeight: 900
-            })
-          }
-          return true // Add this line to return a valid result when value or value.image is undefined
-        })
-      ]
+      validation: (Rule) =>
+        Rule.custom((value, { document }) =>
+          validateRequiredField(value, document)
+        )
     })
   ]
 })

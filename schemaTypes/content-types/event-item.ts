@@ -1,6 +1,6 @@
 import { defineField, defineType, type SanityDocument } from 'sanity'
 
-function validateRequiredField(
+export function validateRequiredField(
   value: string | undefined | unknown,
   document: SanityDocument | undefined
 ) {
