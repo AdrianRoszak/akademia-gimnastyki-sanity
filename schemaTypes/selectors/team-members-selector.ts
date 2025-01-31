@@ -7,7 +7,7 @@ export const teamMemberSelector = defineType({
   fields: [
     {
       name: 'team_member_selector_list',
-      title: 'Lista FAQ',
+      title: 'Zespół',
       type: 'array',
       validation: (Rule) =>
         Rule.min(1).error('Musisz dodać przynajmniej 1 element.'),
@@ -20,7 +20,7 @@ export const teamMemberSelector = defineType({
           validation: (Rule) =>
             Rule.error('Tylko elementy z zakładki ::Zespół:: są dozwolone.'),
           options: {
-            filter: '_type == "faq_item" && !(_id in path("drafts.**"))'
+            filter: '_type == "team_member" && !(_id in path("drafts.**"))'
           }
         }
       ]
