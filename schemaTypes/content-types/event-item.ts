@@ -137,6 +137,13 @@ export const eventItem = defineType({
         //     : 'Link musi być poprawnym adresem URL, np. https://example.com'
         // })
       ]
+    }),
+    defineField({
+      name: 'event_item_internal_link',
+      title: 'Link wewnętrzny',
+      type: 'reference',
+      to: [{ type: 'registration_item' }],
+      description: 'Wybierz stronę wewnętrzną, do której ma prowadzić przycisk.'
     })
   ],
   preview: {
